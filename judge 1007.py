@@ -5,13 +5,15 @@ koreatech judge 1007
 그나마 다행인건 단 하나의 숫자만 짝이 없을 뿐, 나머지는 짝이 있어요.
 짝을 만들어주기 위하여 단 하나만 있는 숫자를 찾아 주세요.
 '''
+import sys
+input = sys.stdin.readline
 
-testcase = int(input())
+testcase = int(input().rstrip())
 result = []
 
 for f1 in range(testcase):
-    inputnum = int(input())
-    nums =  [*map(int,input().split())]
+    inputnum = int(input().rstrip())
+    nums =  list(map(int, input().rstrip().split()))
     nums_set = list(set(nums))
 
     for f2 in range(len(nums_set)):
